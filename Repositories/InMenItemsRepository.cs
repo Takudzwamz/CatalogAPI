@@ -5,12 +5,12 @@ using CatalogAPI.Entities;
 
 namespace CatalogAPI.Repositories
 {
-    public class InMenItemsRepository
+    public class InMenItemsRepository : IItemsRepository
     {
         private readonly List<Item> items = new()
         {
             new Item { Id = Guid.NewGuid(), Name = "Potion", Price = 9, CreatedDate = DateTimeOffset.UtcNow },
-            new Item { Id= Guid.NewGuid(), Name = "Iron Sword", Price = 30, CreatedDate = DateTimeOffset.UtcNow },
+            new Item { Id = Guid.NewGuid(), Name = "Iron Sword", Price = 30, CreatedDate = DateTimeOffset.UtcNow },
             new Item { Id = Guid.NewGuid(), Name = "Bronze Shiled", Price = 50, CreatedDate = DateTimeOffset.UtcNow },
         };
 
